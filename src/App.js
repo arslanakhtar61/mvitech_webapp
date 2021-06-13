@@ -2,6 +2,7 @@ import {fetchUtils, Admin, Resource, ListGuesser } from 'react-admin';
 //import dataProvider from './api/DataProvider';
 import jsonServerProvider from 'ra-data-json-server';
 import simpleRestProvider from 'ra-data-simple-rest';
+import Dashboard from './Dashboard'
 
 
 const fetchJson = (url, options = {}) => {
@@ -20,6 +21,7 @@ const App = () => {
     <Admin 
       title='MVI Tech'
       dataProvider={dataProvider}
+      dashboard={Dashboard}
     >
         <Resource name="vendors" options={{ label: 'Vendors' }} list={ListGuesser} />
         {/* <Resource name="posts" list={ListGuesser} />
