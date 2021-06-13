@@ -18,9 +18,10 @@ const dataProvider = simpleRestProvider('http://localhost:8081', fetchJson);
 const App = () => {
   return (
     <Admin 
+      title='MVI Tech'
       dataProvider={dataProvider}
     >
-        <Resource name="vendors" list={ListGuesser} />
+        <Resource name="vendors" options={{ label: 'Vendors' }} list={ListGuesser} />
         {/* <Resource name="posts" list={ListGuesser} />
         <Resource name="todos" list={ListGuesser} /> */}
     </Admin>
